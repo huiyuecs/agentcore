@@ -1,0 +1,26 @@
+[
+  {
+    "title": "AgentCore product overview",
+    "content": "AgentCore is a multi-agent customer-support runtime built on large language models. It classifies natural-language requests and routes each request to the appropriate specialist agent. Layered conversation memory preserves relevant context across turns, while monitoring and evaluation components track runtime behavior and identify opportunities for improvement."
+  },
+  {
+    "title": "Demonstration subscription plans",
+    "content": "This demonstration catalog contains three sample plans. The Starter plan costs CNY 99 per month and includes 1,000 conversations, one agent, and basic intent recognition. The Professional plan costs CNY 499 per month and includes 10,000 conversations, three agents, advanced intent recognition, and memory management. The Enterprise plan uses custom pricing and includes configurable agent capacity, monitoring, evaluation, and dedicated technical support. All sample plans include a seven-day trial."
+  },
+  {
+    "title": "API integration guide",
+    "content": "Integrating with the AgentCore API takes three steps. First, create an account and generate an API key from the console. Second, send a POST request to /chat with message, user_id, and conv_id fields. Third, process the JSON response, which includes the generated response, detected intent, and selected agent type. Interactive API documentation is available from the /docs endpoint."
+  },
+  {
+    "title": "Common integration questions",
+    "content": "For API timeouts, configure a 30-second client timeout and retry once with backoff. AgentCore includes circuit-breaking safeguards to prevent retry storms. To preserve a multi-turn conversation, send the same conv_id with every request in that conversation. To customize the knowledge base, import documents through /knowledge/add or /knowledge/upload; AgentCore chunks and indexes the content automatically."
+  },
+  {
+    "title": "Data security and privacy",
+    "content": "AgentCore supports TLS-protected transport and isolates user conversations by namespace. Working-memory records expire after 24 hours by default, and deployments can configure their own retention policy. The platform supports self-hosted deployment so organizations can keep application data within infrastructure they control. Production operators remain responsible for provider, storage, access-control, and compliance configuration."
+  },
+  {
+    "title": "Version 2.0 demonstration release notes",
+    "content": "Version 2.0 adds hybrid intent recognition, query rewriting, retrieval reranking, layered conversation memory, runtime monitoring feedback, and an LLM-as-Judge evaluation workflow. It also introduces a smaller multi-stage Docker image and more defensive handling of invalid Unicode input. Performance figures in presentations should be reported only when reproduced against a documented evaluation dataset."
+  }
+]
