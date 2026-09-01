@@ -1,0 +1,26 @@
+# Prometheus  Configuration file — AgentCore  Intelligent customer service system
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: 'agentcore'
+    environment: 'production'
+
+rule_files:
+  - "alerts/*.yml"
+
+scrape_configs:
+  # AgentCore  Main application indicator
+  - job_name: 'agentcore-app'
+    static_configs:
+      - targets: ['agentcore:8000']
+        labels:
+          service: 'agentcore'
+    scrape_interval: 10s
+    metrics_path: '/metrics'
+
+  # Prometheus Self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
