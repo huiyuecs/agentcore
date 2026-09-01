@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <style>
+      .bg { fill: #fbfcfb; }
+      .header { fill: #eef6ff; stroke: #c9d7e9; stroke-width: 1.4; }
+      .panel { fill: #f7fcf9; stroke: #cfe3d7; stroke-width: 1.5; }
+      .band { fill: #f0faf4; stroke: #cfe3d7; stroke-width: 1.2; }
+      .card { fill: #ffffff; stroke: #d7e1df; stroke-width: 1.4; }
+      .blue-card { fill: #f3f9ff; stroke: #cad9e9; }
+      .green-card { fill: #f7fcf9; stroke: #bfe2ce; }
+      .orange-card { fill: #fff9ef; stroke: #efd7af; }
+      .purple-card { fill: #f7f3ff; stroke: #d3c6ef; }
+      .soft-card { fill: #fbfefd; stroke: #d6e6dc; }
+      .title { font: 800 38px "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #13213b; letter-spacing: 1px; }
+      .subtitle { font: 500 18px "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #657284; }
+      .section-title { font: 800 27px "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #08733d; }
+      .label { font: 800 23px "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #17243d; }
+      .small { font: 500 18px "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #25324b; }
+      .muted { font: 500 16px "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #657284; }
+      .tiny { font: 800 15px "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #ffffff; }
+      .green-text { fill: #08733d; }
+      .orange-text { fill: #a85b00; }
+      .purple-text { fill: #573c9b; }
+      .blue-text { fill: #245ca8; }
+      .blue { fill: #3165b7; }
+      .green { fill: #14945b; }
+      .orange { fill: #f47d22; }
+      .purple { fill: #6045a9; }
+      .line { stroke: #aeb8c4; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .green-line { stroke: #14945b; stroke-width: 3; fill: none; marker-end: url(#arrow-green); }
+      .dashed { stroke-dasharray: 9 9; }
+      .shadow { filter: url(#shadow); }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#d8e1df" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#aeb8c4"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#14945b"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000"/>
+
+  <!-- Header -->
+  <rect class="header shadow" x="32" y="28" width="1536" height="112" rx="18"/>
+  <text class="title" x="66" y="78">Data and storage architecture</text>
+  <text class="subtitle" x="66" y="110">Redis  Management of short-term working memory,ChromaDB  Management knowledge base, Situational memory and user portrait,File directory management hot-loadable rules</text>
+  <g transform="translate(1292,58)">
+    <rect class="soft-card" width="226" height="48" rx="12"/>
+    <circle class="green" cx="28" cy="24" r="14"/>
+    <text class="tiny" x="23" y="29"> points</text>
+    <text class="small" x="52" y="30"> Short term/long term/configuration tiering</text>
+  </g>
+
+  <!-- Storage columns -->
+  <rect class="panel shadow" x="32" y="170" width="1536" height="650" rx="18"/>
+  <rect class="band" x="62" y="198" width="1476" height="72" rx="14"/>
+  <text class="section-title" x="92" y="244"> Storage tiering: Change the session status, Vector knowledge and file rule split management</text>
+
+  <g transform="translate(90,318)">
+    <rect class="card green-card" width="420" height="430" rx="14"/>
+    <circle class="green" cx="54" cy="52" r="25"/>
+    <text class="tiny" x="49" y="58">1</text>
+    <text class="label green-text" x="96" y="58">Redis  Working memory</text>
+    <text class="muted" x="96" y="86"> Short-term session state, Emphasis on speed and expiration control</text>
+
+    <rect class="card" x="44" y="122" width="332" height="74" rx="12"/>
+    <text class="label" x="76" y="152">Latest news</text>
+    <text class="muted" x="76" y="178"> Save current session context</text>
+
+    <rect class="card" x="44" y="224" width="332" height="74" rx="12"/>
+    <text class="label" x="76" y="254">TTL Expired</text>
+    <text class="muted" x="76" y="280"> Short-term memory automatic cleaning</text>
+
+    <rect class="card" x="44" y="326" width="332" height="74" rx="12"/>
+    <text class="label" x="76" y="356"> Compressed summary entry</text>
+    <text class="muted" x="76" y="382"> Triggered after a long conversation reaches the threshold</text>
+  </g>
+
+  <g transform="translate(590,318)">
+    <rect class="card blue-card" width="420" height="430" rx="14"/>
+    <circle class="blue" cx="54" cy="52" r="25"/>
+    <text class="tiny" x="49" y="58">2</text>
+    <text class="label blue-text" x="96" y="58">ChromaDB  Vector storage</text>
+    <text class="muted" x="96" y="86"> Long term semantic retrieval, Support RAG and personalization</text>
+
+    <rect class="card" x="44" y="122" width="332" height="74" rx="12"/>
+    <text class="label" x="76" y="152">Knowledge Base</text>
+    <text class="muted" x="76" y="178">knowledge_base / RAG Recall</text>
+
+    <rect class="card" x="44" y="224" width="332" height="74" rx="12"/>
+    <text class="label" x="76" y="254"> Episodic memory</text>
+    <text class="muted" x="76" y="280">episodic  Historical summary</text>
+
+    <rect class="card" x="44" y="326" width="332" height="74" rx="12"/>
+    <text class="label" x="76" y="356"> User portrait</text>
+    <text class="muted" x="76" y="382">user_profile  Preferences and facts</text>
+  </g>
+
+  <g transform="translate(1090,318)">
+    <rect class="card orange-card" width="420" height="430" rx="14"/>
+    <circle class="orange" cx="54" cy="52" r="25"/>
+    <text class="tiny" x="49" y="58">3</text>
+    <text class="label orange-text" x="96" y="58">File type configuration</text>
+    <text class="muted" x="96" y="86">Easy to mount, Hot loading and versioning maintenance</text>
+
+    <rect class="card" x="44" y="122" width="332" height="74" rx="12"/>
+    <text class="label" x="76" y="152"> Demonstration knowledge base</text>
+    <text class="muted" x="76" y="178">data/demo_docs</text>
+
+    <rect class="card purple-card" x="44" y="224" width="332" height="74" rx="12"/>
+    <text class="label purple-text" x="76" y="254">Dynamic Skills</text>
+    <text class="muted" x="76" y="280">skills/*/SKILL.md</text>
+
+    <rect class="card" x="44" y="326" width="332" height="74" rx="12"/>
+    <text class="label" x="76" y="356"> Evaluation baseline</text>
+    <text class="muted" x="76" y="382">data/eval/baseline.json</text>
+  </g>
+
+  <path class="line" d="M510 676 C548 686 552 676 590 662"/>
+  <path class="line" d="M1090 476 C1048 476 1038 476 1010 476"/>
+  <path class="line" d="M1090 578 C1042 596 1034 632 1010 662"/>
+  <path class="line" d="M1090 680 C1048 716 1008 746 948 748"/>
+
+  <!-- Bottom notes -->
+  <rect class="panel shadow" x="32" y="850" width="1536" height="114" rx="18"/>
+  <g transform="translate(92,878)">
+    <circle class="green" cx="30" cy="30" r="18"/>
+    <path d="M21 30 L28 38 L41 21" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="label green-text" x="64" y="24"> Session read first Redis</text>
+    <text class="muted" x="64" y="52"> Ensure the response speed of multiple rounds of dialogue, Replenish long-term memory through digest after expiration</text>
+  </g>
+  <g transform="translate(600,878)">
+    <circle class="blue" cx="30" cy="30" r="18"/>
+    <path d="M18 30 h24 M30 18 v24" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    <text class="label blue-text" x="64" y="24"> Long-term semantic unification into ChromaDB</text>
+    <text class="muted" x="64" y="52">Knowledge, Both historical abstracts and portraits can participate in search enhancement</text>
+  </g>
+  <g transform="translate(1110,878)">
+    <circle class="orange" cx="30" cy="30" r="18"/>
+    <text class="tiny" x="24" y="35">Hot</text>
+    <text class="label orange-text" x="64" y="24"> File configuration facilitates hot loading</text>
+    <text class="muted" x="64" y="52">Skills  and evaluation baselines can be mounted with the deployment directory</text>
+  </g>
+</svg>
